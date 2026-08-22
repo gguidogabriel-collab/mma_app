@@ -1,17 +1,43 @@
-# mma_app
+# MMA Fighter
 
-A new Flutter project.
+Aplicación móvil desarrollada en Flutter sobre las Artes Marciales Mixtas (MMA).
 
-## Getting Started
+## Descripción
 
-This project is a starting point for a Flutter application.
+MMA Fighter es una aplicación sencilla que presenta información básica sobre las Artes Marciales Mixtas, incluyendo disciplinas como striking, fuerza y cardio.
 
-A few resources to get you started if this is your first Flutter project:
+La aplicación incluye una interfaz personalizada, botones interactivos e iconos relacionados con el deporte.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Funcionalidades
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Información sobre qué es el MMA.
+- Sección de striking, fuerza y cardio.
+- Botón interactivo "Motivarme".
+- Mensajes motivacionales.
+- Interfaz con colores personalizados.
+- Uso de iconos de Flutter.
+- Tipografía personalizada mediante Google Fonts.
+
+## Tecnologías utilizadas
+
+- Flutter
+- Dart
+- Visual Studio Code
+- Android Emulator
+- Git y GitHub
+
+## Paquete utilizado
+
+Se utilizó el paquete:
+
+- google_fonts
+
+Este paquete permite utilizar fuentes personalizadas dentro de la aplicación.
+
+## Ejecución
+
+Para ejecutar el proyecto:
+
+```bash
+flutter pub get
+flutter run
