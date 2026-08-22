@@ -41,3 +41,7 @@ Para ejecutar el proyecto:
 ```bash
 flutter pub get
 flutter run
+
+## Estado del proyecto
+
+Aplicación funcional y ejecutada correctamente en un emulador Android.
