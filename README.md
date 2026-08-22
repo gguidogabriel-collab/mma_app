@@ -45,3 +45,7 @@ flutter run
 ## Estado del proyecto
 
 Aplicación funcional y ejecutada correctamente en un emulador Android.
+
+## Interacción
+
+La aplicación cuenta con botones interactivos que muestran mensajes motivacionales al usuario.
