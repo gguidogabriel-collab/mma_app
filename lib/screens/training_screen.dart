@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/training_card.dart';
 
 class TrainingScreen extends StatefulWidget {
   const TrainingScreen({super.key});
@@ -47,26 +48,20 @@ class _TrainingScreenState extends State<TrainingScreen> {
             Expanded(
               child: ListView(
                 children: const [
-                  Card(
-                    child: ListTile(
-                      leading: Icon(Icons.directions_run),
-                      title: Text('Cardio'),
-                      subtitle: Text('Mejora tu resistencia y condición física.'),
-                    ),
+                  TrainingCard(
+                    icon: Icons.directions_run,
+                    title: 'Cardio',
+                    subtitle: 'Mejora tu resistencia y condición física.',
                   ),
-                  Card(
-                    child: ListTile(
-                      leading: Icon(Icons.sports_mma),
-                      title: Text('Striking'),
-                      subtitle: Text('Trabaja golpes, combinaciones y defensa.'),
-                    ),
+                  TrainingCard(
+                    icon: Icons.sports_mma,
+                    title: 'Striking',
+                    subtitle: 'Trabaja golpes, combinaciones y defensa.',
                   ),
-                  Card(
-                    child: ListTile(
-                      leading: Icon(Icons.fitness_center),
-                      title: Text('Fuerza'),
-                      subtitle: Text('Desarrolla potencia y resistencia muscular.'),
-                    ),
+                  TrainingCard(
+                    icon: Icons.fitness_center,
+                    title: 'Fuerza',
+                    subtitle: 'Desarrolla potencia y resistencia muscular.',
                   ),
                 ],
               ),

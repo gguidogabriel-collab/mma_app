@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../models/discipline.dart';
+import '../widgets/discipline_card.dart';
 
 class DisciplinesScreen extends StatelessWidget {
   const DisciplinesScreen({super.key});
@@ -6,26 +8,26 @@ class DisciplinesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final disciplines = [
-      {
-        'name': 'Striking',
-        'description': 'Boxeo, kickboxing y técnicas de golpeo.',
-        'icon': Icons.sports_mma,
-      },
-      {
-        'name': 'Brazilian Jiu-Jitsu',
-        'description': 'Control, llaves y técnicas de suelo.',
-        'icon': Icons.sports_kabaddi,
-      },
-      {
-        'name': 'Wrestling',
-        'description': 'Derribos, control y lucha cuerpo a cuerpo.',
-        'icon': Icons.fitness_center,
-      },
-      {
-        'name': 'Muay Thai',
-        'description': 'Golpes con puños, codos, rodillas y piernas.',
-        'icon': Icons.sports_mma,
-      },
+      Discipline(
+        name: 'Striking',
+        description: 'Boxeo, kickboxing y técnicas de golpeo.',
+        icon: Icons.sports_mma,
+      ),
+      Discipline(
+        name: 'Brazilian Jiu-Jitsu',
+        description: 'Control, llaves y técnicas de suelo.',
+        icon: Icons.sports_kabaddi,
+      ),
+      Discipline(
+        name: 'Wrestling',
+        description: 'Derribos, control y lucha cuerpo a cuerpo.',
+        icon: Icons.fitness_center,
+      ),
+      Discipline(
+        name: 'Muay Thai',
+        description: 'Golpes con puños, codos, rodillas y piernas.',
+        icon: Icons.sports_mma,
+      ),
     ];
 
     return Scaffold(
@@ -46,51 +48,8 @@ class DisciplinesScreen extends StatelessWidget {
           itemBuilder: (context, index) {
             final discipline = disciplines[index];
 
-            return Card(
-              elevation: 4,
-              child: Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CircleAvatar(
-                      radius: 32,
-                      child: Icon(
-                        discipline['icon'] as IconData,
-                        size: 32,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Text(
-                      discipline['name'] as String,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(height: 8),
-                    Expanded(
-                      child: Text(
-                        discipline['description'] as String,
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            content: Text(
-                              'Seleccionaste ${discipline['name']}',
-                            ),
-                          ),
-                        );
-                      },
-                      child: const Text('Ver más'),
-                    ),
-                  ],
-                ),
-              ),
+            return DisciplineCard(
+              discipline: discipline,
             );
           },
         ),

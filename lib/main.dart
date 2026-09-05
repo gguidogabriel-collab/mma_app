@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
+import 'providers/favorites_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/disciplines_screen.dart';
 import 'screens/training_screen.dart';
 import 'screens/favorites_screen.dart';
 
 void main() {
-  runApp(const MMAApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (_) => FavoritesProvider(),
+      child: const MMAApp(),
+    ),
+  );
 }
 
 class MMAApp extends StatelessWidget {

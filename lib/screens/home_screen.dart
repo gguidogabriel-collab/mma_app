@@ -32,14 +32,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    const CircleAvatar(
-                      radius: 45,
-                      child: Icon(
-                        Icons.sports_mma,
-                        size: 50,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        'assets/mma.jpg.jpeg',
+                        height: 180,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
                       ),
                     ),
+
                     const SizedBox(height: 15),
+
                     const Text(
                       'MIXED MARTIAL ARTS',
                       style: TextStyle(
@@ -48,7 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+
                     const SizedBox(height: 10),
+
                     const Text(
                       'Fuerza • Disciplina • Técnica',
                       style: TextStyle(fontSize: 16),
@@ -76,9 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
+              children: [
                 Column(
                   children: [
                     Icon(Icons.sports_mma, size: 35),
